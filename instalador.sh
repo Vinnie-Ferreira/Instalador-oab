@@ -25,9 +25,7 @@ sudo adduser $USER scard
 
 sudo addgroup scard 
 
-wget https://s3-sa-east-1.amazonaws.com/shared-www.validcertificadora.com.br/Downloads/Safesign/Safesign.zip | grep "~" |  echo "Realizando o Download"
-
-unzip Safesign* | grep "~"
+wget -qO - https://assinadorserpro.estaleiro.serpro.gov.br/repository/AssinadorSERPROpublic.asc | sudo apt-key add -
 
 sudo apt-get update | grep "~" | echo "Atualizando pacotes"
 
