@@ -17,7 +17,7 @@ sudo apt-get install pcscd | echo "pcscd - Instalado" | grep "pcscd"
 sudo apt-get install pcsc-tools | echo "pcsc-tools - Instalado" | grep "pcsc-tools"
 
 sudo apt-get install libasedrive-usb | echo "libasedrive-usb - Instalado" | grep "libasedrive-usb"
-libasedrive-usb 
+
 sudo apt-get install opensc | echo "opensc - Instalado" | grep "opensc"
  
 sudo apt-get install libssl1.0.0 | echo "libssl1.0.0 - Instalado" | grep "libssl1.0.0"
@@ -50,7 +50,6 @@ sudo addgroup scard
 
 wget https://s3-sa-east-1.amazonaws.com/shared-www.validcertificadora.com.br/Downloads/Safesign/Safesign.zip | grep "~" |  echo "Realizando o Download"
 
-
 unzip Safesign* | grep "~"
 
 sudo apt-get update | grep "~" | echo "Atualizando pacotes"
@@ -68,8 +67,6 @@ sudo dpkg -i libjpeg* | echo "libjpeg - Instalado" | grep "libjpeg - Instalado"
 sudo dpkg -i libwxbase* | echo "libwxbase - Instalado" | grep "libwxbase - Instalado"
 
 sudo dpkg -i libwxgtk* | echo "libwxgtk - Instalado"  | grep "libwxgtk - Instalado"
-
-sudo apt-get update -y | grep "~"
 
 sudo dpkg -i  SafeSign.deb | echo "Token instalado com sucesso!" | grep "Token instalado com sucesso!"
 
