@@ -23,15 +23,13 @@ sudo apt-get install -y \
     libwxgtk* \
     opensc \
     pcsc-tools \
-    pcscd
+    pcscd 
     
 sudo adduser $USER scard 
 
 sudo addgroup scard 
 
 wget https://s3-sa-east-1.amazonaws.com/shared-www.validcertificadora.com.br/Downloads/Safesign/Safesign.zip
-
-sudo apt-get install pcscd libccid
 
 dpkg -i *.deb
 
