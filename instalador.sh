@@ -23,7 +23,8 @@ sudo apt-get install -y \
     libwxgtk* \
     opensc \
     pcsc-tools \
-    pcscd 
+    pcscd \
+    unzip
     
 sudo adduser $USER scard 
 
