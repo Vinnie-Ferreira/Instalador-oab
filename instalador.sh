@@ -29,8 +29,7 @@ sudo adduser $USER scard
 
 sudo addgroup scard 
 
-sudo apt-get update 
-
+wget https://s3-sa-east-1.amazonaws.com/shared-www.validcertificadora.com.br/Downloads/Safesign/Safesign.zip
 sudo apt-get install pcscd libccid
 
 sudo dpkg -i libgdbm3_1.8.3-14_amd64.deb \
