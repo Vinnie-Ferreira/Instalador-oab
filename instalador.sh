@@ -2,48 +2,25 @@
 
 sudo apt-get update 
 
-sudo apt-get install libengine-pkcs11-openssl | echo "libengine-pkcs11-openssl - Instalado" | grep "libengine-pkcs11-openssl"
-
-sudo apt-get install libp11-3 | echo "libp11-3 - Instalado" | grep "libp11-3"
-
-sudo apt-get install libpcsc-perl | echo "libpcsc-perl - Instalado" | grep "libpcsc-perl"
-
-sudo apt-get install libccid | echo "libccid - Instalado" | grep "libccid"
- 
-sudo apt-get install libpcsclite1 | echo "libpcsclite1 - Instalado" | grep "libpcsclite1"
-
-sudo apt-get install pcscd | echo "pcscd - Instalado" | grep "pcscd"
- 
-sudo apt-get install pcsc-tools | echo "pcsc-tools - Instalado" | grep "pcsc-tools"
-
-sudo apt-get install libasedrive-usb | echo "libasedrive-usb - Instalado" | grep "libasedrive-usb"
-
-sudo apt-get install opensc | echo "opensc - Instalado" | grep "opensc"
- 
-sudo apt-get install libssl1.0.0 | echo "libssl1.0.0 - Instalado" | grep "libssl1.0.0"
- 
-sudo apt-get install libssl1.0.0 | echo "libssl1.0.0 - Instalado" | grep "libssl1.0.0"
- 
-sudo apt-get install libopensc-openssl | echo "libopensc-openssl - Instalado" | grep "libopensc-openssl"
- 
-sudo apt-get install libjbig0 | echo "libjbig0 - Instalado" | grep "libjbig0"
- 
-sudo apt-get install libtiff5 | echo "libtiff5 - Instalado" | grep "libtiff5"
-
-sudo apt-get install fontconfig-config | echo "fontconfig-config - Instalado" | grep "fontconfig-config"
-
-sudo apt-get install libfontconfig1 | echo "libfontconfig1 - Instalado" | grep "libfontconfig1"
-
-sudo apt-get install libwxbase3.0 | echo "libwxbase3.0 - Instalado" | grep "libwxbase3.0"
-
-sudo apt-get install libwxgtk* | echo "libwxgtk* - Instalado" | grep "libwxgtk*"
-
-sudo apt-get install libpcsclite1 | echo "libpcsclite1 - Instalado" | grep "libpcsclite1"
- 
-sudo apt-get install libccid | echo "libccid - Instalado" | grep "libccid"
-
-sudo apt-get install pcscd | echo "pcscd - Instalado" | grep "pcscd"
-
+sudo apt-get install -y \
+    fontconfig-config \
+    libasedrive-usb \
+    libccid \
+    libengine-pkcs11-openssl \
+    libfontconfig1 \
+    libjbig0 \
+    libopensc-openssl \
+    libp11-3 \
+    libpcsc-perl \
+    libpcsclite1 \
+    libssl1.0.0 \
+    libtiff5 \
+    libwxbase3.0 \
+    libwxgtk* \
+    opensc \
+    pcsc-tools \
+    pcscd
+    
 sudo adduser $USER scard 
 
 sudo addgroup scard 
@@ -54,9 +31,7 @@ unzip Safesign* | grep "~"
 
 sudo apt-get update | grep "~" | echo "Atualizando pacotes"
 
-sudo apt-get install pcscd | echo "pcscd - Instalado" | grep "pcscd"
-
-sudo apt-get install libccid | echo "libccid - Instalado" | grep "libccid"
+sudo apt-get install pcscd libccid | echo "libccid - Instalado" | grep "libccid"
 
 sudo dpkg -i libgdbm3_1.8.3-14_amd64.deb | echo "libgdbm - Instalado" | grep "libgdbm - Instalado"
 
@@ -77,8 +52,6 @@ wget https://assinadorserpro.estaleiro.serpro.gov.br/repository/AssinadorSERPROp
 sudo apt-key add AssinadorSERPROpublic.asc 
 
 sudo add-apt-repository 'deb https://www.assinadorserpro.estaleiro.serpro.gov.br/repository/ universal stable' 
-
-sudo apt update 
 
 sudo apt install assinador-serpro -y | echo "Assinador instalado com sucesso!" | grep "Assinador instalado com sucesso!"
 
