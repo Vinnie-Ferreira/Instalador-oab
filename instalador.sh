@@ -45,10 +45,6 @@ sudo dpkg -i  SafeSign.deb | echo "Token instalado com sucesso!" | grep "Token i
 
 sudo rm Safe* lib*
 
-wget https://assinadorserpro.estaleiro.serpro.gov.br/repository/AssinadorSERPROpublic.asc | grep "~" | echo "Instalando assinador"
-
-sudo apt-key add AssinadorSERPROpublic.asc
-
 sudo add-apt-repository 'deb https://www.assinadorserpro.estaleiro.serpro.gov.br/repository/ universal stable' 
 
 sudo apt install assinador-serpro -y | echo "Assinador instalado com sucesso!" | grep "Assinador instalado com sucesso!"
