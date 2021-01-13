@@ -30,17 +30,13 @@ sudo adduser $USER scard
 sudo addgroup scard 
 
 wget https://s3-sa-east-1.amazonaws.com/shared-www.validcertificadora.com.br/Downloads/Safesign/Safesign.zip
+
 sudo apt-get install pcscd libccid
 
-sudo dpkg -i libgdbm3_1.8.3-14_amd64.deb \
-libpng* \
-libjpeg* \
-libwxbase* \
-libwxgtk* \
-SafeSign.deb 
+dpkg -i *.deb
 
 sudo rm Safe* lib*
 
-sudo apt install assinador-serpro -y | echo "Assinador instalado com sucesso!" | grep "Assinador instalado com sucesso!"
+sudo apt install assinador-serpro -y
 
 sudo apt-get update 
