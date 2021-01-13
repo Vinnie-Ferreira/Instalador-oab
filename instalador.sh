@@ -36,5 +36,3 @@ dpkg -i *.deb
 sudo rm Safe* lib*
 
 sudo apt install assinador-serpro -y
-
-sudo apt-get update 
