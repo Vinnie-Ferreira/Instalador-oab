@@ -1,5 +1,9 @@
 #!/bin/bash
 
+wget -qO - https://assinadorserpro.estaleiro.serpro.gov.br/repository/AssinadorSERPROpublic.asc | sudo apt-key add -
+
+sudo add-apt-repository 'deb https://www.assinadorserpro.estaleiro.serpro.gov.br/repository/ universal stable' 
+
 sudo apt-get update 
 
 sudo apt-get install -y \
@@ -25,27 +29,17 @@ sudo adduser $USER scard
 
 sudo addgroup scard 
 
-wget -qO - https://assinadorserpro.estaleiro.serpro.gov.br/repository/AssinadorSERPROpublic.asc | sudo apt-key add -
+sudo apt-get update 
+sudo apt-get install pcscd libccid
 
-sudo apt-get update | grep "~" | echo "Atualizando pacotes"
-
-sudo apt-get install pcscd libccid | echo "libccid - Instalado" | grep "libccid"
-
-sudo dpkg -i libgdbm3_1.8.3-14_amd64.deb | echo "libgdbm - Instalado" | grep "libgdbm - Instalado"
-
-sudo dpkg -i libpng* | echo "libpng - Instalado" | grep "libpng - Instalado"
-
-sudo dpkg -i libjpeg* | echo "libjpeg - Instalado" | grep "libjpeg - Instalado"
-
-sudo dpkg -i libwxbase* | echo "libwxbase - Instalado" | grep "libwxbase - Instalado"
-
-sudo dpkg -i libwxgtk* | echo "libwxgtk - Instalado"  | grep "libwxgtk - Instalado"
-
-sudo dpkg -i  SafeSign.deb | echo "Token instalado com sucesso!" | grep "Token instalado com sucesso!"
+sudo dpkg -i libgdbm3_1.8.3-14_amd64.deb \
+libpng* \
+libjpeg* \
+libwxbase* \
+libwxgtk* \
+SafeSign.deb 
 
 sudo rm Safe* lib*
-
-sudo add-apt-repository 'deb https://www.assinadorserpro.estaleiro.serpro.gov.br/repository/ universal stable' 
 
 sudo apt install assinador-serpro -y | echo "Assinador instalado com sucesso!" | grep "Assinador instalado com sucesso!"
 
