@@ -85,5 +85,3 @@ sudo apt install assinador-serpro -y | echo "Assinador instalado com sucesso!" |
 sudo apt-get update 
 
 sudo apt-get upgrade -y
-
-echo "Você agora está livre de uma vez por todas do JANELAS. Abrace a liberdade."
