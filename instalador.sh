@@ -1,10 +1,10 @@
 #!/bin/bash
 
-
-
 wget -qO - https://assinadorserpro.estaleiro.serpro.gov.br/repository/AssinadorSERPROpublic.asc | sudo apt-key add -
 
 sudo add-apt-repository 'deb https://www.assinadorserpro.estaleiro.serpro.gov.br/repository/ universal stable' 
+
+wget https://s3-sa-east-1.amazonaws.com/shared-www.validcertificadora.com.br/Downloads/Safesign/Safesign.zip
 
 sudo apt-get update 
 
@@ -32,8 +32,6 @@ sudo apt-get install -y \
 sudo adduser $USER scard 
 
 sudo addgroup scard 
-
-wget https://s3-sa-east-1.amazonaws.com/shared-www.validcertificadora.com.br/Downloads/Safesign/Safesign.zip
 
 gdeb -i *.deb
 
