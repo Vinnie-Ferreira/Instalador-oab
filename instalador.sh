@@ -2,6 +2,8 @@
 
 wget -qO - https://assinadorserpro.estaleiro.serpro.gov.br/repository/AssinadorSERPROpublic.asc | sudo apt-key add -
 
+sudo apt-get install -y software-properties-common
+
 sudo add-apt-repository 'deb https://www.assinadorserpro.estaleiro.serpro.gov.br/repository/ universal stable' 
 
 wget https://s3-sa-east-1.amazonaws.com/shared-www.validcertificadora.com.br/Downloads/Safesign/Safesign.zip
@@ -9,7 +11,7 @@ wget https://s3-sa-east-1.amazonaws.com/shared-www.validcertificadora.com.br/Dow
 sudo apt-get update 
 
 sudo apt-get install -y \
-    gdeb \
+    gdebi \
     fontconfig-config \
     libasedrive-usb \
     libccid \
@@ -27,13 +29,14 @@ sudo apt-get install -y \
     opensc \
     pcsc-tools \
     pcscd \
-    unzip
+    unzip \
+    
     
 sudo adduser $USER scard 
 
 sudo addgroup scard 
 
-gdeb -i *.deb
+gdebi *.deb
 
 sudo rm Safe* lib*
 
