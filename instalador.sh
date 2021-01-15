@@ -2,11 +2,22 @@
 
 wget -qO - https://assinadorserpro.estaleiro.serpro.gov.br/repository/AssinadorSERPROpublic.asc | sudo apt-key add -
 
-sudo apt-get install -y software-properties-common
+sudo apt-get install -y \
+software-properties-common \
+gdebi
 
 sudo add-apt-repository 'deb https://www.assinadorserpro.estaleiro.serpro.gov.br/repository/ universal stable' 
 
-wget https://s3-sa-east-1.amazonaws.com/shared-www.validcertificadora.com.br/Downloads/Safesign/Safesign.zip
+wget http://mirrors.kernel.org/ubuntu/pool/main/g/glibc/multiarch-support_2.23-0ubuntu11.2_amd64.deb
+
+wget http://security.debian.org/debian-security/pool/updates/main/o/openssl/libssl1.0.0_1.0.1t-1+deb8u12_amd64.deb
+
+wget https://s3-sa-east-1.amazonaws.com/shared-www.validcertificadora.com.br/Downloads/Linux/SafeSign.deb
+
+
+sudo gdebi multiarch-support_2.28-10_amd64.deb
+
+sudo gdebi libssl1.0.0_1.0.1t-1+deb8u5_amd64.deb
 
 sudo apt-get update 
 
@@ -22,21 +33,21 @@ sudo apt-get install -y \
     libp11-3 \
     libpcsc-perl \
     libpcsclite1 \
-    libssl1.0.0 \
     libtiff5 \
-    libwxbase3.0 \
+    libwxgtk-media3.0-gtk3-dev \
     libwxgtk* \
     opensc \
     pcsc-tools \
     pcscd \
     unzip \
     
-    
+wget https://s3-sa-east-1.amazonaws.com/shared-www.validcertificadora.com.br/Downloads/Linux/SafeSign.deb
+
+gdebi libwxgtk2.8-0_2.8.12.1+dfsg2-dmo4_amd64.deb
+
 sudo adduser $USER scard 
 
 sudo addgroup scard 
-
-gdebi *.deb
 
 sudo rm Safe* lib*
 
