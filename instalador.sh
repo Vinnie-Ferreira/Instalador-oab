@@ -4,7 +4,7 @@
 
 wget -qO - https://assinadorserpro.estaleiro.serpro.gov.br/repository/AssinadorSERPROpublic.asc | sudo apt-key add -
 
-
+sudo apt-get update
 sudo apt-get install -y \
 software-properties-common \
 gdebi
